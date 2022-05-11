@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="Bookshelf:war">
+  <artifact type="war" name="Transfermarkt:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
@@ -8,7 +8,7 @@
       </options>
     </properties>
     <root id="archive" name="Bookshelf-1.0.war">
-      <element id="artifact" artifact-name="Bookshelf:war exploded" />
+      <element id="artifact" artifact-name="Transfermarkt:war exploded" />
     </root>
   </artifact>
 </component>
