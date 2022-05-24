@@ -1,0 +1,21 @@
+{
+	"id": "2eee00c2-1d12-44f1-be49-086a434ec544",
+	"name": "Transfermarkt",
+	"timestamp": "2022-05-24T20:41:33.467Z",
+	"collection_id": "50ea8081-a3d2-46ae-889e-e40e4ec9180c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [],
+	"count": 1,
+	"totalTime": 0,
+	"collection": {
+		"requests": [
+			{
+				"id": "af7bb192-a441-416e-b736-1e72e24ffe0c",
+				"method": "GET"
+			}
+		]
+	}
+}
