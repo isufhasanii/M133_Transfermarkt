@@ -1,19 +1,104 @@
 {
-	"id": "2eee00c2-1d12-44f1-be49-086a434ec544",
+	"id": "87c92d46-206b-4f1b-b937-d61737ecc8fa",
 	"name": "Transfermarkt",
-	"timestamp": "2022-05-24T20:41:33.467Z",
+	"timestamp": "2022-05-24T21:51:24.526Z",
 	"collection_id": "50ea8081-a3d2-46ae-889e-e40e4ec9180c",
 	"folder_id": 0,
 	"environment_id": "0",
 	"totalPass": 0,
 	"totalFail": 0,
-	"results": [],
+	"results": [
+		{
+			"id": "af7bb192-a441-416e-b736-1e72e24ffe0c",
+			"name": "0.1 Testservice",
+			"url": "http://localhost:8080/Transfermarkt-1/resource/test/test",
+			"time": 66,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				66
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d9dbf46d-d4e4-437b-8116-e6d018225c8f",
+			"name": "0.3 Read Spieler",
+			"url": "http://localhost:8080/Transfermarkt-1/resource/spieler/read?nummer=7541-5184",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9c9c5199-fbf7-47f9-bcd2-4200d1de88f8",
+			"name": "0.5 Read Spieler with invalid Nummer",
+			"url": "http://localhost:8080/Transfermarkt-1/resource/spieler/read?nummer=7541-518",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0d586456-7d67-49bb-aa69-fee55993057a",
+			"name": "0.5 Read all Spieler",
+			"url": "http://localhost:8080/Transfermarkt-1/resource/spieler/list",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
 	"count": 1,
-	"totalTime": 0,
+	"totalTime": 87,
 	"collection": {
 		"requests": [
 			{
 				"id": "af7bb192-a441-416e-b736-1e72e24ffe0c",
+				"method": "GET"
+			},
+			{
+				"id": "d9dbf46d-d4e4-437b-8116-e6d018225c8f",
+				"method": "GET"
+			},
+			{
+				"id": "9c9c5199-fbf7-47f9-bcd2-4200d1de88f8",
+				"method": "GET"
+			},
+			{
+				"id": "0d586456-7d67-49bb-aa69-fee55993057a",
 				"method": "GET"
 			}
 		]
