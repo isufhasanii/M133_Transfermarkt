@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.bzz</groupId>
-    <artifactId>BookList</artifactId>
+    <artifactId>Transfermarkt</artifactId>
     <version>1</version>
-    <name>BookList</name>
+    <name>Transfermarkt</name>
     <packaging>war</packaging>
 
     <properties>
@@ -33,6 +33,11 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.2</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

@@ -1,4 +1,4 @@
-package ch.bzz.booklist.service;
+package ch.bzz.Transfermarkt.service;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -16,7 +16,7 @@ import java.util.Set;
 @ApplicationPath("/resource")
 
 public class Config extends Application {
-    private static final String PROPERTIES_PATH = "/home/bzz/webapp/bookList.properties";
+    private static final String PROPERTIES_PATH = "/home/bzz/webapp/Transfermarkt.properties";
     private static Properties properties = null;
 
     /**
