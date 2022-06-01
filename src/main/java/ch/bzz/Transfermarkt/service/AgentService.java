@@ -71,11 +71,10 @@ public class AgentService {
     ){
         Agent agent = new Agent();
         agent.setVollName(vorname, nachname);
-        spieler.setMarktID(marktID);
-        spieler.setMarktWert(marktWert);
-        spieler.setSpielerNummer(spielerNummer);
+        agent.setAgentNummer(agentNummer);
+        agent.setAgentur(agentur);
 
-        DataHandler.insertSpieler(spieler);
+        DataHandler.insertAgent(agent);
         return Response
                 .status(200)
                 .entity("")

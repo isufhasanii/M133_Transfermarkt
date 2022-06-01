@@ -218,4 +218,22 @@ public class DataHandler {
     public static List<Agent> readAllAgents() {
         return getAgentList();
     }
+
+    public static void insertAgent(Agent agent) {
+    }
+
+    public static void insertMannschaft(Mannschaft mannschaft) {
+    }
+
+    public static void insertSpieler(Spieler spieler) {
+    }
+
+    public static boolean deleteSpieler(String spielerNummer) {
+    }
+
+    public static boolean deleteMannschaft(String mannschaftsID) {
+    }
+
+    public static boolean deleteAgent(String agentNummer) {
+    }
 }
