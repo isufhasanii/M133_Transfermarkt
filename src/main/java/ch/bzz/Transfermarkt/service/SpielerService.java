@@ -3,10 +3,7 @@ package ch.bzz.Transfermarkt.service;
 import ch.bzz.Transfermarkt.data.DataHandler;
 import ch.bzz.Transfermarkt.model.Spieler;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -44,5 +41,27 @@ public class SpielerService {
                 .entity(spieler)
                 .build();
     }
+
+    /**
+     * deletes a spieler identified by nummer
+     * @param spielerNummer the key
+     * @return Response
+     */
+    @DELETE
+    @Path("delete")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response deleteSpieler(
+            @QueryParam("nummer") String spielerNummer
+    ){
+        int httpStatus = 200;
+        if (!DataHandler.deleteSpieler(spielerNummer)){
+            httpStatus = 410;
+        }
+        return Response
+                .status(httpStatus)
+                .entity("")
+                .build();
+    }
+
 
 }
