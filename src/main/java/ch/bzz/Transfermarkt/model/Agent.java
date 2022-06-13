@@ -43,7 +43,8 @@ public class Agent {
     /**
      * sets vollName
      *
-     * @param vollName the value to set
+     * @param vorname the value to set
+     * @param nachname the value to set
      */
     public void setVollName(String vorname, String nachname) {
         this.vollName = vollName;

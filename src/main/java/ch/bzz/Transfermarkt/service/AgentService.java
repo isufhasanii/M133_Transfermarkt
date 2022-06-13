@@ -2,6 +2,7 @@ package ch.bzz.Transfermarkt.service;
 
 import ch.bzz.Transfermarkt.data.DataHandler;
 import ch.bzz.Transfermarkt.model.Agent;
+import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Spieler;
 
 import javax.ws.rs.*;
@@ -77,6 +78,31 @@ public class AgentService {
         DataHandler.insertAgent(agent);
         return Response
                 .status(200)
+                .entity("")
+                .build();
+    }
+
+    @POST
+    @Path("update")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response updateAgent(
+            @FormParam("agentNummer") String agentNummer,
+            @FormParam("vorname") String vorname,
+            @FormParam("nachname") String nachname,
+            @FormParam("agentur") String agentur
+    ){
+        int httpStatus = 200;
+        Agent agent = DataHandler.readAgentByNummer(agentNummer);
+        if (agent != null){
+            agent.setVollName(vorname, nachname);
+            agent.setAgentur(agentur);
+
+            DataHandler.updateAgent();
+        }else {
+            httpStatus = 410;
+        }
+        return Response
+                .status(httpStatus)
                 .entity("")
                 .build();
     }

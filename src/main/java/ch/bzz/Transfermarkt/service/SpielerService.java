@@ -1,6 +1,8 @@
 package ch.bzz.Transfermarkt.service;
 
 import ch.bzz.Transfermarkt.data.DataHandler;
+import ch.bzz.Transfermarkt.model.Agent;
+import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Spieler;
 
 import javax.ws.rs.*;
@@ -89,6 +91,34 @@ public class SpielerService {
                 .status(200)
                 .entity("")
                 .build();
+    }
+
+    @POST
+    @Path("update")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response updateSpieler(
+            @FormParam("spielerNummer") String spielerNummer,
+            @FormParam("vorname") String vorname,
+            @FormParam("nachname") String nachname,
+            @FormParam("marktID") String marktID,
+            @FormParam("marktWert") BigDecimal marktWert
+
+            ){
+                int httpStatus = 200;
+                Spieler spieler = DataHandler.readSpielerByNummer(spielerNummer);
+                if (spieler != null){
+                    spieler.setName(vorname, nachname);
+                    spieler.setMarktID(marktID);
+                    spieler.setMarktWert(marktWert);
+
+                    DataHandler.updateSpieler();
+                }else {
+                    httpStatus = 410;
+                }
+                return Response
+                        .status(httpStatus)
+                        .entity("")
+                        .build();
     }
 
 }

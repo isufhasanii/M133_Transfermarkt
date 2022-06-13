@@ -220,20 +220,73 @@ public class DataHandler {
     }
 
     public static void insertAgent(Agent agent) {
+        getAgentList().add(agent);
+        writeAgentJSON();
     }
 
     public static void insertMannschaft(Mannschaft mannschaft) {
+        getMannschaftList().add(mannschaft);
+        writeMannschaftJSON();
     }
 
     public static void insertSpieler(Spieler spieler) {
+        getSpielerList().add(spieler);
+        writeSpielerJSON();
     }
 
     public static boolean deleteSpieler(String spielerNummer) {
+        Spieler spieler = readSpielerByNummer(spielerNummer);
+        if (spieler != null){
+            getSpielerList().remove(spieler);
+            writeSpielerJSON();
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public static boolean deleteMannschaft(String mannschaftsID) {
+        Mannschaft mannschaft = readMannschaftByID(mannschaftsID);
+        if (mannschaft != null){
+            getMannschaftList().remove(mannschaft);
+            writeMannschaftJSON();
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public static boolean deleteAgent(String agentNummer) {
+        Agent agent = readAgentByNummer(agentNummer);
+        if (agent != null){
+            getAgentList().remove(agent);
+            writeAgentJSON();
+            return true;
+        }else {
+            return false;
+        }
     }
+
+    public static void updateSpieler() {
+        writeSpielerJSON();
+    }
+
+    public static void updateMannschaft() {
+        writeMannschaftJSON();
+    }
+
+    public static void updateAgent() {
+        writeAgentJSON();
+    }
+
+    private static void writeSpielerJSON() {
+
+    }
+    private static void writeMannschaftJSON() {
+
+    }
+    private static void writeAgentJSON() {
+
+    }
+
 }

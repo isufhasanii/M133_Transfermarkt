@@ -1,6 +1,7 @@
 package ch.bzz.Transfermarkt.service;
 
 import ch.bzz.Transfermarkt.data.DataHandler;
+import ch.bzz.Transfermarkt.model.Agent;
 import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Spieler;
 
@@ -75,6 +76,28 @@ public class MannschaftService {
         DataHandler.insertMannschaft(mannschaft);
         return Response
                 .status(200)
+                .entity("")
+                .build();
+    }
+
+    @POST
+    @Path("update")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response updateMannschaft(
+            @FormParam("mannschaftID") String mannschaftID,
+            @FormParam("vereinsName") String vereinsname
+    ){
+        int httpStatus = 200;
+        Mannschaft mannschaft = DataHandler.readMannschaftByID(mannschaftID);
+        if (mannschaft != null){
+            mannschaft.setVereinsname(vereinsname);
+
+            DataHandler.updateMannschaft();
+        }else {
+            httpStatus = 410;
+        }
+        return Response
+                .status(httpStatus)
                 .entity("")
                 .build();
     }
