@@ -1,0 +1,34 @@
+[
+    {
+        "spielerNummer": "8953-4147",
+        "vollName": "Lionel Messi",
+        "agent": "Mino Raiola",
+        "mannschaftID": "852-789",
+        "marktWert": 100000000.0,
+        "marktID": "751-423"
+    },
+    {
+        "spielerNummer": "7541-5184",
+        "vollName": "Vinicius JR",
+        "agent": "Frederick Meier",
+        "mannschaftID": "784-545",
+        "marktWert": 75000000.0,
+        "marktID": "751-452"
+    },
+    {
+        "spielerNummer": "7845-3486",
+        "vollName": "Robert Lewandowski",
+        "agent": "Isuf Hasani",
+        "mannschaftID": "785-412",
+        "marktWert": 52000000.0,
+        "marktID": "784-654"
+    },
+    {
+        "spielerNummer": "4548-1346",
+        "vollName": "Jordi Alba",
+        "agent": "Isuf Hasani",
+        "mannschaftID": "852-789",
+        "marktWert": 35000000.0,
+        "marktID": "465-175"
+    }
+]
