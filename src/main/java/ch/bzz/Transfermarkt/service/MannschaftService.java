@@ -88,13 +88,13 @@ public class MannschaftService {
     @Path("update")
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateMannschaft(
-            @FormParam("mannschaftID") String mannschaftID,
-            @FormParam("vereinsName") String vereinsname
+            @Valid @BeanParam Mannschaft mannschaft
     ){
         int httpStatus = 200;
-        Mannschaft mannschaft = DataHandler.readMannschaftByID(mannschaftID);
+        mannschaft = DataHandler.readMannschaftByID(mannschaft.getMannschaftID());
         if (mannschaft != null){
-            mannschaft.setVereinsname(vereinsname);
+            mannschaft.setMannschaftID(mannschaft.getMannschaftID());
+            mannschaft.setVereinsname(mannschaft.getVereinsname());
 
             DataHandler.updateMannschaft();
         }else {

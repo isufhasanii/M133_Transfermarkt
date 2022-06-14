@@ -72,7 +72,8 @@ public class Agent {
      * @param nachname the value to set
      */
     public void setVollName(String vorname, String nachname) {
-        this.vollName = vollName;
+        this.vorname = vorname;
+        this.nachname = nachname;
     }
 
     public List<ch.bzz.Transfermarkt.model.Spieler> getSpielerList() {
@@ -93,5 +94,13 @@ public class Agent {
 
     public void setAgentur(String agentur) {
         this.agentur = agentur;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    public String getVorname() {
+        return vorname;
     }
 }
