@@ -6,6 +6,10 @@
 	},
 	"item": [
 		{
+			"name": "Validation",
+			"item": []
+		},
+		{
 			"name": "0.1 Testservice",
 			"request": {
 				"method": "GET",
@@ -28,7 +32,7 @@
 			"response": []
 		},
 		{
-			"name": "0.3 Read Spieler",
+			"name": "0.2 Read Spieler",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -56,7 +60,7 @@
 			"response": []
 		},
 		{
-			"name": "0.5 Read Spieler with invalid Nummer",
+			"name": "0.3 Read Spieler with invalid Nummer",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -84,7 +88,7 @@
 			"response": []
 		},
 		{
-			"name": "0.5 Read all Spieler",
+			"name": "0.4 Read all Spieler",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -100,6 +104,3777 @@
 						"resource",
 						"spieler",
 						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.5 Read Mannschaft",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/read?id=852-789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"read"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "852-789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.6 Read Mannschaft with invalid ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/read?id=852-78",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"read"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "852-78"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.7 Read all Mannschaft",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.8 Read Agent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/read?nummer=5863-1456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"read"
+					],
+					"query": [
+						{
+							"key": "nummer",
+							"value": "5863-1456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.9 Read Agent with invalid Nummer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/read?nummer=5863-145",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"read"
+					],
+					"query": [
+						{
+							"key": "nummer",
+							"value": "5863-145"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.10 Read all Agents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.11 Delete Spieler",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/delete?nummer=7541-5184",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "nummer",
+							"value": "7541-5184"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.11a Delete Spieler with invalid Nummer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/delete?nummer=7541-518",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "nummer",
+							"value": "7541-518"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.12 Delete Mannschaft",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/delete?id=784-545",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "784-545"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.12a Delete Mannschaft with invalid ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/delete?id=784-54",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "784-54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.13 Delete Agent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/delete?nummer=8956-4174",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "nummer",
+							"value": "8956-4174"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.13a Delete Agent with invalid Nummer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/delete?nummer=8956-417",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "nummer",
+							"value": "8956-417"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14 Create Spieler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14a Create Spieler with invalid Nummer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-475b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14b Create Spieler with a Number too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "451-475",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14c Create Spieler with a Number too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "56456-235246",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14d Create Spieler with invalid Vorname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo2",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14e Create Spieler with Vorname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14f Create Spieler with Vorname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14g Create Spieler with invalid Nachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "S3lah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14h Create Spieler with Nachname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14i Create Spieler with Nachname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14j Create Spieler with invalid MarktWert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "3446g",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14k Create Spieler with MarktWert too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "12000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14l Create Spieler with MarktWert too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "415-156",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "23543464574674573456467",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14m Create Spieler with invalid marktID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "3ed-24d",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14n Create Spieler with marktID too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "32030-341234",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.14o Create Spieler with marktID too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Mo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Salah",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "32-12",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "50000000",
+							"type": "text"
+						},
+						{
+							"key": "spielerNummer",
+							"value": "4512-4756",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15 Create Mannschaft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "755-045",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Gjilan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15a Create Mannschaft with invalid ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "755-04b",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Gjilan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15b Create Mannschaft with ID too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "75-04",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Gjilan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15c Create Mannschaft with ID too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "7553-0453",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Gjilan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15d Create Mannschaft with invalid vereinsName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "755-045",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Gjilan12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15e Create Mannschaft with vereinsName too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "755-045",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.15f Create Mannschaft with vereinsName too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "755-045",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16 Create Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16a Create Agent with invalid Nummer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-012a",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16b Create Agent with Nummer too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "165-012",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16c Create Agent with Nummer too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "16513-01253",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16d Create Agent with invalid Vorname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony3",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16e Create Agent with Vorname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16f Create Agent with Vorname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16g Create Agent with invalid Nachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese3",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16h Create Agent with Nachname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16i Create Agent with Nachname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16j Create Agent with invalid Agentur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "New Eye AG34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16k Create Agent with Agentur too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.16l Create Agent with Agentur too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vorname",
+							"value": "Tony",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Caprese",
+							"type": "text"
+						},
+						{
+							"key": "agentNummer",
+							"value": "1651-0125",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17 Update Spieler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17a Update Spieler with invalid Number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-414b",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17b Update Spieler with Number too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "895-147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17c Update Spieler with Number too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "895332-41471",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17d Update Spieler with invalid Vorname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel1",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17e Update Spieler with Vorname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17f Update Spieler with Vorname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17g Update Spieler with invalid Nachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi3",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17h Update Spieler with Nachname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17i Update Spieler with Nachname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17j Update Spieler with invalid MarktWert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "7000000w",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17k Update Spieler with MarktWert too small",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "700",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17l Update Spieler with MarktWert too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "700000002345345",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-423",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17m Update Spieler with invalid marktID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "751-42f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17n Update Spieler with marktID too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "71-42",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.17o Update Spieler with marktID too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spielerNummer",
+							"value": "8953-4147",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "LIonel",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Messi",
+							"type": "text"
+						},
+						{
+							"key": "marktWert",
+							"value": "70000000",
+							"type": "text"
+						},
+						{
+							"key": "marktID",
+							"value": "7513-4233",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/spieler/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"spieler",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18 Update Mannschaft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "785-412",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Bayern München",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18a Update Mannschaft with invalid ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "785-41tg",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Bayern München",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18b Update Mannschaft with ID too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "75-41",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Bayern München",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18c Update Mannschaft with ID too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "7855-41245",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Bayern München",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18d Update Mannschaft with invalid vereinsName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "785-412",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "FC Bayern München34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18e Update Mannschaft with vereinsname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "785-412",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.18f Update Mannschaft with vereinsname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mannschaftID",
+							"value": "785-412",
+							"type": "text"
+						},
+						{
+							"key": "vereinsname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/mannschaft/update?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"mannschaft",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19 Update Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19a Update Agent with invalid Nummer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-145a",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19b Update Agent with Number too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "586-145",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19c Update Agent with Number too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "58663-14566",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19d Update Agent with invalid Vorname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf5",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19e Update Agent with Vorname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19f Update Agent with Vorname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19g Update Agent with invalid Nachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani5",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19h Update Agent with Nachname too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19i Update Agent with Nachname too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19j Update Agent with invalid Agentur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "Space Rocket456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19k Update Agent with Agentur too short",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.19l Update Agent with Agentur too long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agentNummer",
+							"value": "5863-1456",
+							"type": "text"
+						},
+						{
+							"key": "vorname",
+							"value": "Isuf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Hasani",
+							"type": "text"
+						},
+						{
+							"key": "agentur",
+							"value": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Transfermarkt-1/resource/agent/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Transfermarkt-1",
+						"resource",
+						"agent",
+						"update"
 					]
 				}
 			},
