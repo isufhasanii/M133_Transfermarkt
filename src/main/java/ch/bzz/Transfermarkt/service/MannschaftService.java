@@ -6,6 +6,9 @@ import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Spieler;
 
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -37,6 +40,8 @@ public class MannschaftService {
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
     public Response readMannschaft(
+            @NotNull
+            @Pattern(regexp = "[0-9]{3}-[0-9]{3}")
             @QueryParam("if") String mannschaftsID
     ){
         Mannschaft mannschaft = DataHandler.readMannschaftByID(mannschaftsID);
@@ -50,6 +55,8 @@ public class MannschaftService {
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
     public Response deleteMannschaft(
+            @NotNull
+            @Pattern(regexp = "[0-9]{3}-[0-9]{3}")
             @QueryParam("id") String mannschaftsID
     ){
         int httpStatus = 200;
@@ -66,12 +73,9 @@ public class MannschaftService {
     @Path("create")
     @Produces(MediaType.TEXT_PLAIN)
     public Response createMannschaft(
-            @FormParam("mannschaftsID") String mannschaftsID,
-            @FormParam("vereinsname") String vereinsname
+            @Valid @BeanParam Mannschaft mannschaft
     ){
-        Mannschaft mannschaft = new Mannschaft();
-        mannschaft.setMannschaftID(mannschaftsID);
-        mannschaft.setVereinsname(vereinsname);
+        mannschaft = new Mannschaft();
 
         DataHandler.insertMannschaft(mannschaft);
         return Response

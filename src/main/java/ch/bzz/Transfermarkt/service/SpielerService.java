@@ -5,8 +5,11 @@ import ch.bzz.Transfermarkt.model.Agent;
 import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Spieler;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.math.BigDecimal;
@@ -38,7 +41,9 @@ public class SpielerService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response readSpieler(
             @NotNull
+            @Pattern(regexp = "[0-9]{4}-[0-9]{4}")
             @QueryParam("nummer") String spielerNummer
+
     ){
         Spieler spieler = DataHandler.readSpielerByNummer(spielerNummer);
         return Response
@@ -51,6 +56,8 @@ public class SpielerService {
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
     public Response deleteSpieler(
+            @NotNull
+            @Pattern(regexp = "[0-9]{4}-[0-9]{4}")
             @QueryParam("nummer") String spielerNummer
     ){
         int httpStatus = 200;
@@ -65,28 +72,19 @@ public class SpielerService {
 
     /**
      * inserts a new spieler
-     * @param vorname the vorname
-     * @param nachname the nachname
-     * @param marktID the marktID
-     * @param marktWert the marktWert
-     * @param spielerNummer the SpielerNummer
+     * @param mannschaftID the mannschaftID
      * @return
      */
     @POST
     @Path("create")
     @Produces(MediaType.TEXT_PLAIN)
     public Response createSpieler(
-            @FormParam("vorname") String vorname,
-            @FormParam("nachname") String nachname,
-            @FormParam("marktID") String marktID,
-            @FormParam("marktWert")BigDecimal marktWert,
-            @FormParam("spielerNummer")String spielerNummer
+            @Valid @BeanParam Spieler spieler,
+            @FormParam("mannschaftID") String mannschaftID
+
     ){
-        Spieler spieler = new Spieler();
-        spieler.setName(vorname, nachname);
-        spieler.setMarktID(marktID);
-        spieler.setMarktWert(marktWert);
-        spieler.setSpielerNummer(spielerNummer);
+        spieler = new Spieler();
+        spieler.setMannschaftID(mannschaftID);
 
         DataHandler.insertSpieler(spieler);
         return Response
@@ -99,19 +97,17 @@ public class SpielerService {
     @Path("update")
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateSpieler(
-            @FormParam("spielerNummer") String spielerNummer,
-            @FormParam("vorname") String vorname,
-            @FormParam("nachname") String nachname,
-            @FormParam("marktID") String marktID,
-            @FormParam("marktWert") BigDecimal marktWert
-
+            @Valid @BeanParam Spieler spieler,
+            @FormParam("mannschaftID") String mannschaftID
             ){
                 int httpStatus = 200;
-                Spieler spieler = DataHandler.readSpielerByNummer(spielerNummer);
+                spieler = DataHandler.readSpielerByNummer(spieler.getSpielernummer());
                 if (spieler != null){
-                    spieler.setName(vorname, nachname);
-                    spieler.setMarktID(marktID);
-                    spieler.setMarktWert(marktWert);
+                    spieler.setMannschaftID(mannschaftID);
+                    spieler.setMarktWert(spieler.getMarktWert());
+                    spieler.setMarktID(spieler.getMarktID());
+                    spieler.setName(spieler.getVorname(), spieler.getNachname());
+                    spieler.setSpielerNummer(spieler.getSpielernummer());
 
                     DataHandler.updateSpieler();
                 }else {

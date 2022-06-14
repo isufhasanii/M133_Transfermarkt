@@ -2,12 +2,16 @@ package ch.bzz.Transfermarkt.model;
 
 import ch.bzz.Transfermarkt.data.DataHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.ws.rs.FormParam;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.spi.LocaleServiceProvider;
 
 /**
  * a book in the bookshelf
@@ -47,6 +51,7 @@ public class Spieler {
     private String marktID;
 
     private String vollName = vorname +" "+ nachname;
+
 
     /**
      * gets the mannschaftID from the Mannschaft-object
@@ -111,6 +116,14 @@ public class Spieler {
      */
     public String getName() {
         return vollName;
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
     }
 
     /**
