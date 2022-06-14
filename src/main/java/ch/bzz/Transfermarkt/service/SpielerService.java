@@ -5,6 +5,7 @@ import ch.bzz.Transfermarkt.model.Agent;
 import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Spieler;
 
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -36,6 +37,7 @@ public class SpielerService {
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
     public Response readSpieler(
+            @NotNull
             @QueryParam("nummer") String spielerNummer
     ){
         Spieler spieler = DataHandler.readSpielerByNummer(spielerNummer);

@@ -5,9 +5,12 @@ import ch.bzz.Transfermarkt.model.Mannschaft;
 import ch.bzz.Transfermarkt.model.Agent;
 import ch.bzz.Transfermarkt.service.Config;
 
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -280,13 +283,51 @@ public class DataHandler {
     }
 
     private static void writeSpielerJSON() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectWriter objectWriter = objectMapper.writer(new DefaultPrettyPrinter());
+        FileOutputStream fileOutputStream = null;
+        Writer fileWriter;
+
+        String spielerPath = Config.getProperty("spielerJSON");
+        try {
+            fileOutputStream = new FileOutputStream(spielerPath);
+            fileWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8));
+            objectWriter.writeValue(fileWriter, getSpielerList());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
 
     }
     private static void writeMannschaftJSON() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectWriter objectWriter = objectMapper.writer(new DefaultPrettyPrinter());
+        FileOutputStream fileOutputStream = null;
+        Writer fileWriter;
+
+        String mannschaftPath = Config.getProperty("mannschaftJSON");
+        try {
+            fileOutputStream = new FileOutputStream(mannschaftPath);
+            fileWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8));
+            objectWriter.writeValue(fileWriter, getSpielerList());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
 
     }
     private static void writeAgentJSON() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectWriter objectWriter = objectMapper.writer(new DefaultPrettyPrinter());
+        FileOutputStream fileOutputStream = null;
+        Writer fileWriter;
 
+        String agentPath = Config.getProperty("agentJSON");
+        try {
+            fileOutputStream = new FileOutputStream(agentPath);
+            fileWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8));
+            objectWriter.writeValue(fileWriter, getSpielerList());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
     }
 
 }

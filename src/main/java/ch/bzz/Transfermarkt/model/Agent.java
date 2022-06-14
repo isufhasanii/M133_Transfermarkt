@@ -1,16 +1,41 @@
 package ch.bzz.Transfermarkt.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
 import java.util.List;
 
 /**
  * a book publisher
  */
 public class Agent {
+
+    @FormParam("agentNummer")
+    @Pattern(regexp = "[0-9]{4}-[0-9]{4}")
+    @NotNull
     private String agentNummer;
+
+    @FormParam("vorname")
+    @Size(min = 1, max = 64, message = "Es braucht zwischen 1 - 64 Zeichen")
+    @Pattern(regexp = "[A-Z&&a-z]")
+    @NotNull
     private String vorname;
+
+    @FormParam("nachname")
+    @Size(min = 1, max = 64, message = "Es braucht zwischen 1 - 64 Zeichen")
+    @Pattern(regexp = "[A-Z&&a-z]")
+    @NotNull
     private String nachname;
+
+    @FormParam("agentur")
+    @Size(min = 1, max = 64, message = "Es braucht zwischen 1 - 64 Zeichen")
+    @Pattern(regexp = "[A-Z&&a-z]")
+    @NotNull
     private String agentur;
+
     private List<ch.bzz.Transfermarkt.model.Spieler> spielerList;
+
     private String vollName = vorname + " "+ nachname;
 
     /**

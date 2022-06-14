@@ -1,14 +1,28 @@
 package ch.bzz.Transfermarkt.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
 import java.util.List;
 
 /**
  * a mannschaft
  */
 public class Mannschaft {
+
+    @FormParam("mannschaftID")
+    @Pattern(regexp = "[0-9]{3}-[0-9]{3}")
+    @NotNull
     private String mannschaftID;
+
+    @FormParam("vereinsname")
+    @Size(min = 1, max = 64, message = "Es braucht zwischen 1 - 64 Zeichen")
+    @Pattern(regexp = "[A-Z&&a-z]")
     private String vereinsname;
+
     private List<ch.bzz.Transfermarkt.model.Spieler> spielerList;
+
     /**
      * gets mannschaftID
      *

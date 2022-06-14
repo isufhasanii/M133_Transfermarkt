@@ -3,6 +3,10 @@ package ch.bzz.Transfermarkt.model;
 import ch.bzz.Transfermarkt.data.DataHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
 import java.math.BigDecimal;
 
 /**
@@ -10,13 +14,38 @@ import java.math.BigDecimal;
  */
 public class Spieler {
     @JsonIgnore
+
+    @FormParam("spielerNummer")
+    @Pattern(regexp = "[0-9]{4}-[0-9]{4}")
+    @NotNull
     private String spielerNummer;
+
+    @FormParam("vorname")
+    @Pattern(regexp = "[A-Z&&a-z]")
+    @Size
     private String vorname;
+
+    @FormParam("nachname")
+    @Pattern(regexp = "[A-Z&&a-z]")
+    @Size
     private String nachname;
+
+    @FormParam("agent")
     private Agent agent;
+
+    @FormParam("marktWert")
+    @Pattern(regexp = "[A-Z&&a-z]")
+    @Size
     private BigDecimal marktWert;
+
+    @FormParam("verein")
     private Mannschaft verein;
+
+    @FormParam("marktID")
+    @Pattern(regexp = "[0-9]{3}-[0-9]{3}")
+    @Size
     private String marktID;
+
     private String vollName = vorname +" "+ nachname;
 
     /**
