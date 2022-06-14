@@ -26,12 +26,12 @@ public class Spieler {
 
     @FormParam("vorname")
     @Pattern(regexp = "[A-Z&&a-z]")
-    @Size
+    @Size(min = 1, max = 64, message = "Es braucht zwischen 1 - 64 Zeichen")
     private String vorname;
 
     @FormParam("nachname")
     @Pattern(regexp = "[A-Z&&a-z]")
-    @Size
+    @Size(min = 1, max = 64, message = "Es braucht zwischen 1 - 64 Zeichen")
     private String nachname;
 
     @FormParam("agent")
