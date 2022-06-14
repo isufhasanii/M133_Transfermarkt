@@ -38,8 +38,8 @@ public class Spieler {
     private Agent agent;
 
     @FormParam("marktWert")
-    @Pattern(regexp = "[A-Z&&a-z]")
-    @Size
+    @Pattern(regexp = "[0-9]")
+    @Size(min = 100000, max = 1000000000, message = "Marktwert muss zwischen 100'000 & 100'000'000 liegen")
     private BigDecimal marktWert;
 
     @FormParam("verein")
