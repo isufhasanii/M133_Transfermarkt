@@ -7,6 +7,7 @@ import ch.bzz.Transfermarkt.model.Spieler;
 
 
 import javax.validation.Valid;
+import javax.ws.rs.Path;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.ws.rs.*;
